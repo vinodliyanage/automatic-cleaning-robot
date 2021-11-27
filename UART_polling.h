@@ -1,3 +1,16 @@
+/***********************************************************************
+  
+            https://github.com/VinodLiyanage/GLASS-CLEANER-ROBOT
+  -------------------------------- (C) ---------------------------------
+  
+  @name UART_polling.h
+  @version 1.0.0
+  @author Vinod Liyanage
+  @description UART serial communication library (polling method)
+
+************************************************************************/
+
+
 #ifndef UART_H_
 #define UART_H_
 

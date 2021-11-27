@@ -1,5 +1,5 @@
 #include <avr/io.h>
-#include "UART.h"
+#include "UART_polling.h"
 
 #ifndef F_CPU
 #define F_CPU 8000000L
