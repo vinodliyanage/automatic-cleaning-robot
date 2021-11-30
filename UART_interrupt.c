@@ -8,6 +8,8 @@ void UART_init(unsigned long F_CPU, unsigned long BAUDRATE)
 	
 	BAUD (BAUDRATE OR BITS RATE) = F_CPU / (16UL * (UBRR + 1)) 
 	UBRR (BAUD_PRESCALE) = (F_CPU / (BAUDRATE * 16UL)) - 1
+	
+	Refer atmega32 data sheet.
 	*/
 	
 	unsigned long BAUD_PRESCALE;
@@ -114,7 +116,6 @@ This flag bit is set when the entire frame from Tx Buffer is shifted out and the
 Bit 5 – UDRE: USART Data Register Empty
 If UDRE is one, the buffer is empty which indicates the transmit buffer (UDR) is ready to receive new data. The UDRE Flag can generate a Data Register Empty Interrupt. 
 UDRE is set after a reset to indicate that the transmitter is ready.
-
 */
 
 
@@ -123,7 +124,6 @@ ISR(USART_RXC_vect)
 	/*
 	Receive Complete interrupt.
 	this function will call when the data is received and there is unread data in the UDR register.
-	add code down below
 	*/
 }
 
@@ -132,6 +132,5 @@ ISR(USART_UDRE_vect)
 	/*
 	transmit Complete interrupt.
 	this function will call when the transmit is completed.
-	add code down below.
 	*/	
 }
